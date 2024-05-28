@@ -1,0 +1,41 @@
+.nuevoRegistro{
+    border: none;
+    border-radius: 10px;
+    background-color: #2a2ae6;
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.resultData{
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    width: 50%;
+}
+
+.option{
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.shoppingCart{
+    width: 40%;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.addCar{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.total{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
