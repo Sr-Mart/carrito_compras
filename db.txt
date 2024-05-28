@@ -1,0 +1,32 @@
+create database shopping_cart;
+
+use shopping_cart;
+
+create table user(
+	id int primary key auto_increment,
+    user varchar(20) not null unique,
+    password varchar (30) not null
+);
+
+CREATE TABLE product (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price INT NOT NULL,
+    stock INT NOT NULL
+);
+
+CREATE TABLE cart (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    total INT NOT NULL,
+    constraint fk_cart_user_id foreign key (user_id) references user(id)
+);
+
+CREATE TABLE cart_product (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cart_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    constraint fk_cart_product_cart_id foreign key (cart_id) references cart(id),
+    constraint fk_cart_product_product_id foreign key (product_id) references product(id)
+);
